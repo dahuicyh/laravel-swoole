@@ -1,5 +1,5 @@
 {
-    "name": "swooleWh/lumen-swoole",
+    "name": "swoolewh/laravel-swoole",
     "description": "High performance HTTP server based on Swoole. Speed up your Laravel and Lumen applications.",
     "keywords": ["swoole", "laravel", "lumen"],
     "license": "MIT",
@@ -30,25 +30,25 @@
             "src/Server/helpers.php"
         ],
         "psr-4": {
-            "SwooleWh\\Http\\": "src"
+            "SwooleTW\\Http\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SwooleWh\\Http\\Tests\\": "tests",
-            "SwooleWh\\Http\\Tests\\Fixtures\\Laravel\\App\\": "tests/fixtures/laravel/app"
+            "SwooleTW\\Http\\Tests\\": "tests",
+            "SwooleTW\\Http\\Tests\\Fixtures\\Laravel\\App\\": "tests/fixtures/laravel/app"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "SwooleWh\\Http\\LaravelServiceProvider"
+                "SwooleTW\\Http\\LaravelServiceProvider"
             ],
             "aliases": {
-                "Server": "SwooleWh\\Http\\Server\\Facades\\Server",
-                "Table": "SwooleWh\\Http\\Server\\Facades\\Table",
-                "Room": "SwooleWh\\Http\\Websocket\\Facades\\Room",
-                "Websocket": "SwooleWh\\Http\\Websocket\\Facades\\Websocket"
+                "Server": "SwooleTW\\Http\\Server\\Facades\\Server",
+                "Table": "SwooleTW\\Http\\Server\\Facades\\Table",
+                "Room": "SwooleTW\\Http\\Websocket\\Facades\\Room",
+                "Websocket": "SwooleTW\\Http\\Websocket\\Facades\\Websocket"
             }
         }
     }
