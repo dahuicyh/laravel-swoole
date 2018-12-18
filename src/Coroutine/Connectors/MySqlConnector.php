@@ -27,7 +27,7 @@ class MySqlConnector extends BaseConnector
     /**
      * Handle an exception that occurred during connect execution.
      *
-     * @param  \Exception  $e
+     * @param  \Throwable  $e
      * @param  string  $dsn
      * @param  string  $username
      * @param  string  $password
@@ -36,7 +36,7 @@ class MySqlConnector extends BaseConnector
      *
      * @throws \Exception
      */
-    protected function tryAgainIfCausedByLostConnection(Exception $e, $dsn, $username, $password, $options)
+    protected function tryAgainIfCausedByLostConnection($e, $dsn, $username, $password, $options)
     {
         // https://github.com/swoole/swoole-src/blob/a414e5e8fec580abb3dbd772d483e12976da708f/swoole_mysql_coro.c#L196
         if ($this->causedByLostConnection($e) || Str::contains($e->getMessage(), 'is closed')) {
