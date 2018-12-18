@@ -14,6 +14,22 @@ This package provides a high performance HTTP server to speed up your Laravel/Lu
 |:-------:|:-------:|:-----:|:-------:|
 | >=7.1 | ~5.1    | ~5.1  | >=4.0.0 |
 
+##install lumen
+
+lumen in bootstrap/app.php
+
+$app->configure('swoole_http');
+$app->configure('swoole_websocket');
+
+$app->register(SwooleTW\Http\LumenServiceProvider::class);
+
+in config/:
+copy swoole_http.php
+copy swoole_websocket.php
+
+start server:
+/usr/local/php728/bin/php artisan swoole:http start
+
 ## Features
 
 * Run **Laravel/Lumen** application on top of **Swoole**.
